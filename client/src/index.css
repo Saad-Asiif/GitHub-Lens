@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(218, 23%, 11%);
+  --foreground: hsl(213, 31%, 94%);
+  --muted: hsl(217, 19%, 17%);
+  --muted-foreground: hsl(217, 10%, 64%);
+  --popover: hsl(217, 19%, 17%);
+  --popover-foreground: hsl(213, 31%, 94%);
+  --card: hsl(217, 19%, 17%);
+  --card-foreground: hsl(213, 31%, 94%);
+  --border: hsl(217, 19%, 21%);
+  --input: hsl(217, 19%, 21%);
+  --primary: hsl(212, 100%, 67%);
+  --primary-foreground: hsl(216, 100%, 99%);
+  --secondary: hsl(217, 19%, 17%);
+  --secondary-foreground: hsl(213, 31%, 94%);
+  --accent: hsl(217, 19%, 17%);
+  --accent-foreground: hsl(213, 31%, 94%);
+  --destructive: hsl(4, 89%, 63%);
+  --destructive-foreground: hsl(213, 31%, 94%);
+  --ring: hsl(212, 100%, 67%);
+  --radius: 0.5rem;
+  
+  /* GitHub specific colors */
+  --gh-success: hsl(137, 55%, 36%);
+  --gh-warning: hsl(42, 87%, 55%);
+  --gh-danger: hsl(4, 89%, 63%);
+}
+
+.dark {
+  --background: hsl(218, 23%, 11%);
+  --foreground: hsl(213, 31%, 94%);
+  --muted: hsl(217, 19%, 17%);
+  --muted-foreground: hsl(217, 10%, 64%);
+  --popover: hsl(217, 19%, 17%);
+  --popover-foreground: hsl(213, 31%, 94%);
+  --card: hsl(217, 19%, 17%);
+  --card-foreground: hsl(213, 31%, 94%);
+  --border: hsl(217, 19%, 21%);
+  --input: hsl(217, 19%, 21%);
+  --primary: hsl(212, 100%, 67%);
+  --primary-foreground: hsl(216, 100%, 99%);
+  --secondary: hsl(217, 19%, 17%);
+  --secondary-foreground: hsl(213, 31%, 94%);
+  --accent: hsl(217, 19%, 17%);
+  --accent-foreground: hsl(213, 31%, 94%);
+  --destructive: hsl(4, 89%, 63%);
+  --destructive-foreground: hsl(213, 31%, 94%);
+  --ring: hsl(212, 100%, 67%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  .gh-success {
+    color: hsl(137, 55%, 36%);
+  }
+
+  .gh-warning {
+    color: hsl(42, 87%, 55%);
+  }
+
+  .gh-danger {
+    color: hsl(4, 89%, 63%);
+  }
+
+  .bg-gh-success {
+    background-color: hsl(137, 55%, 36%);
+  }
+
+  .bg-gh-warning {
+    background-color: hsl(42, 87%, 55%);
+  }
+
+  .bg-gh-danger {
+    background-color: hsl(4, 89%, 63%);
+  }
+
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #58a6ff, #79c0ff, #58a6ff);
+    background-size: 200% 200%;
+    animation: gradient 4s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+}
