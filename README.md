@@ -1,3 +1,5 @@
+![Image](https://github.com/user-attachments/assets/ac8f8366-aa27-43a2-a0a9-015ca7904ed0)
+
 # Repository Health Analyzer
 
 ## Overview
